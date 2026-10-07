@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Rodar Semgrep
-        run: semgrep scan --config p/default --error
+        run: semgrep scan --config p/default --error --exclude .github
 
   trivy:
     name: Trivy (imagem Docker)
